@@ -12,7 +12,7 @@ def status():
 
 @app.route('/api/soma', methods=['GET'])
 def soma():
-  n1 = int(request.args.get('n1'))
+  n = int(request.args.get('n1'))
   n2 = int(request.args.get('n2'))
   
   return jsonify({"soma": n1+n2})
