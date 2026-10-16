@@ -1,5 +1,6 @@
 import pytest
 from app import app
+from random import randrange
 
 @pytest.fixture
 def client():
@@ -17,6 +18,8 @@ def test_home_mensagem(client):
   assert dados['mensagem'] == "Bem-vindo a API FastOrder!"
 
 def test_soma(client):
-  resposta = client.get('/api/soma?n1=1&n2=2')
+  x = randrange(-100, 100)
+  y = randrange(-100, 100)
+  resposta = client.get(f'/api/soma?n1={x}&n2={y}')
   dados = resposta.get_json()
   assert dados['soma'] == 3
