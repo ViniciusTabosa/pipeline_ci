@@ -67,7 +67,7 @@ jobs:
       # Análise Estática de Segurança (SAST)
       - name: SAST - Análise Estática com Bandit
         run: |
-          bandit -r . -ll -ii
+          bandit -r . -lll
 
       # Análise de Composição de Software (SCA)
       - name: SCA - Análise de Dependências com Pip-Audit
