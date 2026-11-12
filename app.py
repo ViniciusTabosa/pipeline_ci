@@ -7,7 +7,6 @@ FEATURE_DESCONTO_PROMO = os.getenv('FEATURE_DESCONTO_PROMO', 'FALSE').lower() ==
 
 @app.route('/')
 def home():
-    eval()
     return jsonify({"mensagem": "Bem vindo a API Fast Order!"})
 
 @app.route('/api/status')
